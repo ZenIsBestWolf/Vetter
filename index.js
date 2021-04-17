@@ -33,7 +33,7 @@ client.on('message', async message => {
     try {await grooving.members.fetch(target.id).then(memobj => {
         exists = true;
         oldMember = memobj;
-    })};
+    })}
     catch {exists = false};
     if (!(target.roles.cache.has(veteranRole)) && exists && oldMember.joinedTimestamp < maxJoinDate) {
         target.roles.add(role);
